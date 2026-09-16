@@ -2,13 +2,18 @@
 <html lang="ar" dir="rtl">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>بوابة المواطن الذكية</title>
 
+
     <!-- الخط العربي -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
@@ -17,326 +22,610 @@
     >
 
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
+
 <div id="app-root">
 
-    <!-- Navbar -->
+
+    <!-- ================= Navbar ================= -->
+
     <nav class="navbar">
 
+
         <div class="logo">
-            <span class="logo-icon">🏛️</span>
+
+            <!-- v-bind -->
+
+            <img
+                :src="logo"
+                alt="شعار بوابة المواطن"
+            >
 
             <span>
                 {{ portalName }}
             </span>
+
         </div>
+
 
         <div class="nav-links">
 
-            <a href="#">{{ homeLink }}</a>
+            <a href="#">
+                {{ homeLink }}
+            </a>
 
-            <a href="#services">{{ servicesLink }}</a>
+            <a href="#services">
+                {{ servicesLink }}
+            </a>
 
-            <a href="#requests">{{ requestsLink }}</a>
+            <a href="#requests">
+                {{ requestsLink }}
+            </a>
 
-            <a href="#profile">{{ profileLink }}</a>
+            <a href="#profile">
+                {{ profileLink }}
+            </a>
 
         </div>
+
 
     </nav>
 
 
-    <!-- Hero -->
+
+    <!-- ================= Hero ================= -->
+
     <section class="hero">
+
 
         <div class="hero-content">
 
+
             <span class="welcome">
+
                 {{ welcomeMessage }} 👋
+
             </span>
 
+
             <h1>
+
                 {{ heroTitle }}
 
                 <span>
                     {{ heroHighlight }}
                 </span>
+
             </h1>
 
+
             <p>
+
                 {{ heroDescription }}
+
             </p>
 
+
+            <!-- Event Handling -->
+
             <button @click="showServices">
+
                 {{ heroButton }}
 
                 <span>←</span>
+
             </button>
 
-            <p v-if="message" class="message">
+
+            <!-- Conditional Rendering -->
+
+            <p
+                v-if="message"
+                class="message"
+                :style="{ color: messageColor }"
+            >
+
                 {{ message }}
+
             </p>
 
-        </div>
-
-
-        <!-- الشكل التوضيحي -->
-        <div class="hero-image">
-
-            <div class="image-card">
-
-                <div class="building">
-                    🏛️
-                </div>
-
-                <h3>
-                    {{ portalName }}
-                </h3>
-
-                <p>
-                    {{ imageDescription }}
-                </p>
-
-                <div class="small-cards">
-
-                    <div>
-                        🪪
-                        <span>وثائق</span>
-                    </div>
-
-                    <div>
-                        🚗
-                        <span>مركبات</span>
-                    </div>
-
-                    <div>
-                        🏠
-                        <span>عقارات</span>
-                    </div>
-
-                </div>
-
-            </div>
 
         </div>
+
 
     </section>
 
 
-    <!-- Services -->
-    <section class="services" id="services">
+
+    <!-- ================= Services ================= -->
+
+    <section
+        class="services"
+        id="services"
+    >
+
 
         <div class="section-title">
 
+
             <span>
+
                 {{ servicesSmallTitle }}
+
             </span>
 
+
             <h2>
+
                 {{ servicesTitle }}
+
             </h2>
 
+
             <p>
+
                 {{ servicesDescription }}
+
             </p>
 
+
         </div>
+
 
 
         <div class="service-cards">
 
-            <!-- الخدمة الأولى -->
+
+            <!-- الوثائق الشخصية -->
+
             <div class="service-card">
 
+
                 <div class="service-icon">
-                    🪪
+
+                    <img
+                        :src="documentIcon"
+                        alt="الوثائق الشخصية"
+                    >
+
                 </div>
 
+
                 <h3>
+
                     {{ documentService }}
+
                 </h3>
 
+
                 <p>
+
                     {{ documentDescription }}
+
                 </p>
 
+
                 <a href="#">
+
                     عرض الخدمات ←
+
                 </a>
+
 
             </div>
 
 
-            <!-- الخدمة الثانية -->
+
+            <!-- المركبات -->
+
             <div class="service-card">
 
+
                 <div class="service-icon">
-                    🚗
+
+                    <img
+                        :src="vehicleIcon"
+                        alt="المركبات"
+                    >
+
                 </div>
 
+
                 <h3>
+
                     {{ vehicleService }}
+
                 </h3>
 
+
                 <p>
+
                     {{ vehicleDescription }}
+
                 </p>
 
+
                 <a href="#">
+
                     عرض الخدمات ←
+
                 </a>
+
 
             </div>
 
 
-            <!-- الخدمة الثالثة -->
+
+            <!-- العقارات -->
+
             <div class="service-card">
 
-                <div class="service-icon">
-                    🏠
-                </div>
 
+                <div class="service-icon">
+
+                    <img
+                        :src="realEstateIcon"
+                        alt="العقارات"
+                    >
+
+                </div>
                 <h3>
+
                     {{ realEstateService }}
+
                 </h3>
+
+
                 <p>
+
                     {{ realEstateDescription }}
+
                 </p>
 
+
                 <a href="#">
+
                     عرض الخدمات ←
+
                 </a>
+
 
             </div>
 
 
-            <!-- الخدمة الرابعة -->
+
+            <!-- التعليم -->
+
             <div class="service-card">
 
+
                 <div class="service-icon">
-                    🎓
+
+                    <img
+                        :src="educationIcon"
+                        alt="التعليم"
+                    >
+
                 </div>
 
+
                 <h3>
+
                     {{ educationService }}
+
                 </h3>
 
+
                 <p>
+
                     {{ educationDescription }}
+
                 </p>
 
+
                 <a href="#">
+
                     عرض الخدمات ←
+
                 </a>
 
+
             </div>
+
 
         </div>
+
 
     </section>
 
 
-    <!-- Why us -->
-    <section class="why-us">
+
+    <!-- ================= Requests ================= -->
+
+    <section
+        class="requests"
+        id="requests"
+    >
+
 
         <div class="section-title">
 
+
             <span>
-                {{ whySmallTitle }}
+                طلباتك
             </span>
 
+
             <h2>
-                {{ whyTitle }}
+                آخر طلباتك
             </h2>
 
+
+            <p>
+                يمكنك البحث عن طلباتك ومتابعة حالتها
+            </p>
+
+
         </div>
+
+
+
+        <!-- Two-Way Data Binding -->
+
+        <div class="search-box">
+
+
+            <input
+                type="text"
+                v-model="requestSearch"
+                placeholder="ابحث عن طلب..."
+            >
+
+
+        </div>
+
+
+
+        <!-- Conditional Rendering -->
+
+        <div
+            class="request-card"
+            v-show="showFirstRequest"
+        >
+
+
+            <div>
+
+
+                <h3>
+
+                    {{ requestName }}
+
+                </h3>
+
+
+                <p>
+
+                    رقم الطلب:
+                    {{ requestNumber }}
+
+                </p>
+
+
+            </div>
+
+
+
+            <!-- Class Binding -->
+
+            <span :class="requestStatusClass">
+
+                {{ requestStatus }}
+
+            </span>
+
+
+        </div>
+
+
+
+        <p
+            v-if="requestSearch && !showFirstRequest"
+            class="no-result"
+        >
+
+            لا يوجد طلب مطابق للبحث
+
+        </p>
+
+
+    </section>
+
+
+
+    <!-- ================= Why Us ================= -->
+
+    <section class="why-us">
+
+
+        <div class="section-title">
+
+
+            <span>
+
+                {{ whySmallTitle }}
+
+            </span>
+
+
+            <h2>
+
+                {{ whyTitle }}
+
+            </h2>
+
+
+        </div>
+
 
 
         <div class="features">
 
+
             <div class="feature">
 
+
                 <div class="feature-icon">
+
                     ⚡
+
                 </div>
 
+
                 <h3>
+
                     {{ featureOneTitle }}
+
                 </h3>
 
+
                 <p>
+
                     {{ featureOneDescription }}
+
                 </p>
+
 
             </div>
 
 
+
             <div class="feature">
 
+
                 <div class="feature-icon">
+
                     🔒
+
                 </div>
 
+
                 <h3>
+
                     {{ featureTwoTitle }}
+
                 </h3>
 
+
                 <p>
+
                     {{ featureTwoDescription }}
+
                 </p>
 
+
             </div>
+
 
 
             <div class="feature">
 
+
                 <div class="feature-icon">
+
                     📱
+
                 </div>
 
+
                 <h3>
+
                     {{ featureThreeTitle }}
+
                 </h3>
 
+
                 <p>
+
                     {{ featureThreeDescription }}
+
                 </p>
 
+
             </div>
+
 
         </div>
+
 
     </section>
 
 
-    <!-- Footer -->
-    <footer>
+
+    <!-- ================= Footer ================= -->
+
+    <!-- ================= Footer ================= -->
+
+<footer>
+
+    <div class="footer-content">
 
         <div class="footer-logo">
-            🏛️ {{ portalName }}
+            {{ portalName }}
         </div>
 
         <p>
             {{ footerDescription }}
         </p>
 
+        <div class="footer-links">
+
+            <a href="#">
+                {{ homeLink }}
+            </a>
+
+            <a href="#services">
+                {{ servicesLink }}
+            </a>
+
+            <a href="#requests">
+                {{ requestsLink }}
+            </a>
+
+            <a href="#profile">
+                {{ profileLink }}
+            </a>
+
+        </div>
+
         <p class="copyright">
             {{ copyright }}
         </p>
 
-    </footer>
+    </div>
+
+</footer>
+
 
 </div>
 
 
+
 <!-- Vue -->
+
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
+
 <!-- JavaScript -->
+
 <script src="script.js"></script>
 
+
 </body>
+
 </html>

@@ -33,45 +33,7 @@
 
     <!-- ================= Navbar ================= -->
 
-    <nav class="navbar">
-
-
-        <div class="logo">
-
-            <img
-                :src="logo"
-                alt="شعار بوابة المواطن"
-            >
-
-            <span>
-                {{ portalName }}
-            </span>
-
-        </div>
-
-
-        <div class="nav-links">
-
-            <a href="index.html">
-                {{ homeLink }}
-            </a>
-
-            <a href="services.html">
-                {{ servicesLink }}
-            </a>
-
-            <a href="#">
-                {{ requestsLink }}
-            </a>
-
-            <a href="#">
-                {{ profileLink }}
-            </a>
-
-        </div>
-
-
-    </nav>
+    <Navbar></Navbar>
 
 
 
@@ -225,61 +187,7 @@
 
     <!-- ================= Footer ================= -->
 
-    <footer>
-
-        <div class="footer-content">
-
-
-            <div class="footer-logo">
-
-                {{ portalName }}
-
-            </div>
-
-
-            <p>
-
-                {{ footerDescription }}
-
-            </p>
-
-
-            <div class="footer-links">
-
-
-                <a href="index.html">
-                    {{ homeLink }}
-                </a>
-
-
-                <a href="services.html">
-                    {{ servicesLink }}
-                </a>
-
-
-                <a href="#">
-                    {{ requestsLink }}
-                </a>
-
-
-                <a href="#">
-                    {{ profileLink }}
-                </a>
-
-
-            </div>
-
-
-            <p class="copyright">
-
-                {{ copyright }}
-
-            </p>
-
-
-        </div>
-
-    </footer>
+    <app-footer></app-footer>
 
 
 </div>
@@ -291,7 +199,8 @@
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
 <!-- Services JavaScript -->
-
+<script  src="components/navbar.js"></script>
+<script src="components/footer.js"></script>
 <script src="services.js"></script>
 
 

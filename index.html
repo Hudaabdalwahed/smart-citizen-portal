@@ -34,45 +34,7 @@
 
     <!-- ================= Navbar ================= -->
 
-    <nav class="navbar">
-
-
-        <div class="logo">
-
-            <img
-                :src="logo"
-                alt="شعار بوابة المواطن"
-            >
-
-            <span>
-                {{ portalName }}
-            </span>
-
-        </div>
-
-
-        <div class="nav-links">
-
-            <a href="#">
-                {{ homeLink }}
-            </a>
-
-            <a href="#services">
-                {{ servicesLink }}
-            </a>
-
-            <a href="#requests">
-                {{ requestsLink }}
-            </a>
-
-            <a href="#profile">
-                {{ profileLink }}
-            </a>
-
-        </div>
-
-
-    </nav>
+    <Navbar></Navbar>
 
 
 
@@ -448,71 +410,7 @@
 
     <!-- ================= Footer ================= -->
 
-    <footer>
-
-
-        <div class="footer-content">
-
-
-            <div class="footer-logo">
-
-                {{ portalName }}
-
-            </div>
-
-
-            <p>
-
-                {{ footerDescription }}
-
-            </p>
-
-
-            <div class="footer-links">
-
-
-                <a href="#">
-
-                    {{ homeLink }}
-
-                </a>
-
-
-                <a href="#services">
-
-                    {{ servicesLink }}
-
-                </a>
-
-
-                <a href="#requests">
-
-                    {{ requestsLink }}
-
-                </a>
-
-
-                <a href="#profile">
-
-                    {{ profileLink }}
-
-                </a>
-
-
-            </div>
-
-
-            <p class="copyright">
-
-                {{ copyright }}
-
-            </p>
-
-
-        </div>
-
-
-    </footer>
+    <app-footer></app-footer>
 
 
 </div>
@@ -526,9 +424,11 @@
 
 <!-- JavaScript -->
 
+
+
+<script src="components/navbar.js"></script>
+<script src="components/footer.js"></script>
 <script src="script.js"></script>
-
-
 </body>
 
 </html>

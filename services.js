@@ -2,7 +2,11 @@ const { createApp } = Vue;
 
 
 createApp({
-
+    //COMPONENTS
+components: {
+    Navbar,
+   AppFooter
+},
     // ================= Data =================
 
     data() {

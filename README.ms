@@ -34,4 +34,6 @@ Class Binding :class
 11
 Style Binding :style
 
-
+12
+v-for
+استخدمتا بعرض الخدمات 

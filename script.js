@@ -10,23 +10,29 @@ createApp({
         return {
 
 
-            // Portal
+            // ================= Portal =================
 
-            portalName: "بوابة المواطن الذكية",
+            portalName:
+                "بوابة المواطن الذكية",
 
-            logo: "images/logo.png",
+            logo:
+                "images/logo.png",
 
 
 
-            // Navbar
+            // ================= Navbar =================
 
-            homeLink: "الرئيسية",
+            homeLink:
+                "الرئيسية",
 
-            servicesLink: "الخدمات",
+            servicesLink:
+                "الخدمات",
 
-            requestsLink: "طلباتي",
+            requestsLink:
+                "طلباتي",
 
-            profileLink: "حسابي",
+            profileLink:
+                "حسابي",
 
 
 
@@ -35,18 +41,14 @@ createApp({
             welcomeMessage:
                 "أهلاً بك في بوابة المواطن",
 
-
             heroTitle:
                 "خدماتك الحكومية",
-
 
             heroHighlight:
                 "بسهولة وأمان",
 
-
             heroDescription:
                 "أنجز معاملاتك واستعرض الخدمات الحكومية وتابع طلباتك من مكان واحد.",
-
 
             heroButton:
                 "استعراض الخدمات",
@@ -58,76 +60,74 @@ createApp({
             servicesSmallTitle:
                 "خدماتنا",
 
-
             servicesTitle:
                 "الخدمات الإلكترونية",
-
 
             servicesDescription:
                 "اختر الخدمة التي تريد الوصول إليها",
 
 
 
-            // Images
+            // ================= Services Array =================
 
-            documentIcon:
-                "images/documents.png",
+            services: [
 
+                {
+                    id: 1,
 
-            vehicleIcon:
-                "images/vehicle.png",
+                    name:
+                        "الوثائق الشخصية",
 
+                    description:
+                        "إصدار وتجديد الوثائق الشخصية",
 
-            realEstateIcon:
-                "images/real_estate.png",
-
-
-            educationIcon:
-                "images/education.png",
-
-
-
-            // Document
-
-            documentService:
-                "الوثائق الشخصية",
+                    image:
+                        "images/documents.png"
+                },
 
 
-            documentDescription:
-                "إصدار وتجديد الوثائق الشخصية",
+                {
+                    id: 2,
+
+                    name:
+                        "المركبات",
+
+                    description:
+                        "خدمات المركبات ورخص القيادة",
+
+                    image:
+                        "images/vehicle.png"
+                },
 
 
+                {
+                    id: 3,
 
-            // Vehicle
+                    name:
+                        "العقارات",
 
-            vehicleService:
-                "المركبات",
+                    description:
+                        "الاستعلام عن الخدمات العقارية",
 
-
-            vehicleDescription:
-                "خدمات المركبات ورخص القيادة",
-
-
-
-            // Real Estate
-
-            realEstateService:
-                "العقارات",
+                    image:
+                        "images/real_estate.png"
+                },
 
 
-            realEstateDescription:
-                "الاستعلام عن الخدمات العقارية",
+                {
+                    id: 4,
 
+                    name:
+                        "التعليم",
 
+                    description:
+                        "الخدمات التعليمية والشهادات",
 
-            // Education
+                    image:
+                        "images/education.png"
+                }
 
-            educationService:
-                "التعليم",
-
-
-            educationDescription:
-                "الخدمات التعليمية والشهادات",
+            ],
 
 
 
@@ -136,33 +136,26 @@ createApp({
             whySmallTitle:
                 "لماذا البوابة؟",
 
-
             whyTitle:
                 "خدمات أسهل للمواطن",
-
 
 
             featureOneTitle:
                 "سرعة",
 
-
             featureOneDescription:
                 "الوصول إلى الخدمات بطريقة أسرع وأسهل.",
-
 
 
             featureTwoTitle:
                 "أمان",
 
-
             featureTwoDescription:
                 "الحفاظ على معلومات وطلبات المستخدم.",
 
 
-
             featureThreeTitle:
                 "سهولة الاستخدام",
-
 
             featureThreeDescription:
                 "واجهة بسيطة تعمل على مختلف الأجهزة.",
@@ -171,8 +164,8 @@ createApp({
 
             // ================= Message =================
 
-            message: "",
-
+            message:
+                "",
 
             messageColor:
                 "#F2D36B",
@@ -184,22 +177,24 @@ createApp({
             requestSearch:
                 "",
 
-
             requestName:
                 "تجديد رخصة القيادة",
-
 
             requestNumber:
                 "REQ-2026-001",
 
-
             requestStatus:
                 "قيد المعالجة",
-                footerDescription:
-    "منصة رقمية لتسهيل الوصول إلى الخدمات الحكومية.",
 
-copyright:
-    "© 2026 بوابة المواطن الذكية - جميع الحقوق محفوظة"
+
+
+            // ================= Footer =================
+
+            footerDescription:
+                "منصة رقمية لتسهيل الوصول إلى الخدمات الحكومية.",
+
+            copyright:
+                "© 2026 بوابة المواطن الذكية - جميع الحقوق محفوظة"
 
         };
 
@@ -212,11 +207,9 @@ copyright:
     computed: {
 
 
-        // Class Binding
+        // ================= Class Binding =================
 
         requestStatusClass() {
-
-
             if (
                 this.requestStatus === "مكتمل"
             ) {
@@ -241,12 +234,10 @@ copyright:
 
 
 
-        // Computed Property للبحث
+        // ================= Computed Property =================
 
         showFirstRequest() {
 
-
-            // إذا مربع البحث فارغ
 
             if (
                 this.requestSearch === ""
@@ -257,7 +248,6 @@ copyright:
             }
 
 
-            // البحث عن اسم الطلب
             return this.requestName
                 .toLowerCase()
                 .includes(
@@ -281,10 +271,9 @@ copyright:
             this.message =
                 "تم اختيار الخدمات الإلكترونية";
 
-
         }
 
     }
 
 
-}).mount("#app-root"); 
+}).mount("#app-root");

@@ -37,3 +37,7 @@ Style Binding :style
 12
 v-for
 استخدمتا بعرض الخدمات 
+13
+components 
+استخدمتا ب 
+navbar + footer 
